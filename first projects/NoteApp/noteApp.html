@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="noteApp.css" />
+    <title>Coffee & Notes</title>
+  </head>
+  <body>
+    <div class="topCont">
+      <img src="images/coffee and notes5.png" />
+
+      <div class="noteBar">
+        <input class="titleInput" type="text" placeholder="Note Title" />
+        <button id="plus" class="addNote">&#10010;</button>
+      </div>
+    </div>
+
+    <hr class="hRule" />
+
+    <main class="bottomCont">
+      <div class="note">
+        <p class="title"></p>
+        <hr />
+        <p class="noteContent">
+          <span contenteditable="true"></span>
+        </p>
+        <!-- <div class="bottomContainer">
+          <div class="bottomBtnsContainers">
+            <button class="saveBtn">Save</button>
+          </div>
+
+          <div class="bottomBtnsContainers">
+            <button class="delContBtn">Delete</button>
+          </div>
+        </div> -->
+
+      </div>
+    </main>
+
+    <script src="noteApp.js"></script>
+  </body>
+</html>
