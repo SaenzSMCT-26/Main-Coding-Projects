@@ -1,3 +1,5 @@
+const { createElement } = require("react");
+
 const titleInput = document.querySelector(".titleInput");
 const plus = document.querySelector("#plus");
 const main = document.querySelector("main");
@@ -60,3 +62,4 @@ plus.addEventListener("click", () => {
 
     main.appendChild(noteCard);
 });
+
