@@ -13,7 +13,14 @@
 
 /* calculation functions for data */
 function subtract_shorts_from_longs(value1, value2) {
-      value1 = document.querySelector('#long_value').textContent;
-      value2 = document.querySelector('#short_value').textContent;
+      value1 = document.querySelector('#long_value').value;
+      value2 = document.querySelector('#short_value').value;
       return value1 - value2;
 }
+
+document.querySelector('#calculate').addEventListener('click', () => {
+      (function calculate_button() {
+            const screen_value = document.querySelector('#Screen').textContent = subtract_shorts_from_longs();
+            return screen_value;
+      })();
+})
