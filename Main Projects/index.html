@@ -1,27 +1,62 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Document</title>
-      <link rel="stylesheet" href="style.css">
-</head>
-<body>
-      <div>
-            <input type="text" id="long_value">
-            <input type="text" id="short_value">
-            <input type="text" id="longChange">
-            <input type="text" id="shortChange">
-      </div>
-      <button id="calculate">
-            
-      </button>
-      <br>
-      <div>
-            <h1 id="Screen">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div id="main_container">
+                  <div id="categories_container">
+                        <p>Categories</p>
+                        <p>Non-Commercial</p>
+                        <p>Commercial</p>
+                        <p>Nonreportables</p>
+                  </div>
+                  <div id="Longs_Shorts_Container_GP">
 
-            </h1>
-      </div>
-</body>
+                        <div id="containerP1">
+                              <div id="longs" class="innerData">
+                                    <p>Current Longs</p>
+                                    <input type="number" class="long_value_one"/>
+                                    <input type="number" class="long_value_two"/>
+                                    <input type="number" class="long_value_three"/>
+                              </div>
+                              <div id="shorts" class="innerData">
+                                    <p>Current Short</p>
+                                    <input type="number" class="short_value_one"/>
+                                    <input type="number" class="short_value_two"/>
+                                    <input type="number" class="short_value_three"/>
+                              </div>
+                        </div>
+
+
+                        <div id="containerP2">
+                              <div id="longChange" class="innerData">
+                                    <p>Long change</p>
+                                    <input type="number" class="long_value_change_one"/>
+                                    <input type="number" class="long_value_change_two"/>
+                                    <input type="number" class="long_value_change_three"/>
+                              </div>
+                              <div id="shortChange" class="innerData">
+                                    <p>Short Change</p>
+                                    <input type="number" class="short_value_change_one"/>
+                                    <input type="number" class="short_value_change_two"/>
+                                    <input type="number" class="short_value_change_three"/>
+                              </div>
+                              
+                        </div>
+
+                  </div>
+			<!-- <input type="text" id="longChange">
+            <input type="text" id="shortChange"> -->
+		</div>
+		<button id="calculate">calculate</button>
+		<br />
+		<div>
+			<h1 id="Screen" style="border: solid black; width: 25%"></h1>
+		</div>
+
+            <script src="script.js"></script>
+	</body>
 </html>
-

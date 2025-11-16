@@ -1,0 +1,20 @@
+*{
+      padding: 0;
+      margin: 0;
+}
+
+html, body {
+      height: 100vh;
+      width: 100%;
+}
+
+#main_container {
+      display: flex;
+      #Longs_Shorts_Container_GP {
+            display: flex;
+            .innerData {
+                  display: flex;
+                  flex-direction: column;
+            }
+      }
+}
