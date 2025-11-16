@@ -3,7 +3,7 @@
 const [l1, l2, l3] = [(document.querySelector('.long_value_one')), (document.querySelector('.long_value_two')), (document.querySelector('.long_value_three'))];
 const [s1, s2, s3] = [(document.querySelector('.short_value_one')), (document.querySelector('.short_value_two')), (document.querySelector('.short_value_three'))];
 const [lC1, lC2, lC3] = [(document.querySelector('.long_value_change_one')), (document.querySelector('.long_value_change_two')), (document.querySelector('.long_value_change_three'))];
-const [sC1, sC2, sC3] = [(document.querySelector('.short_value_change_one')), (document.querySelector('.short_value_change_two')), (document.querySelector())];
+const [sC1, sC2, sC3] = [(document.querySelector('.short_value_change_one')), (document.querySelector('.short_value_change_two')), (document.querySelector('.short_value_change_three'))];
 
 // const array = [0.70, 0.25, -0.05];
 /* -------------- calculation function object -------------- */
@@ -24,7 +24,8 @@ const resultFn = () => {
       let result;
       let score;
 
-      const net_position = calculation_block.subtraction(Number(long.value), Number(short.value));
+      /* nP is short for net position */
+      const [nP1, nP2, nP3] = [(calculation_block.subtraction(Number(l.value), Number(short.value))), ()];
       const change_in_net = calculation_block.subtraction(Number(longChange.value), Number(shortChange.value));
       const previous = calculation_block.subtraction(Number(net_position), Number(change_in_net));
 
