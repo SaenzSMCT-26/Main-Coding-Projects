@@ -25,8 +25,17 @@ const resultFn = () => {
       let score;
 
       /* nP is short for net position */
-      const [nP1, nP2, nP3] = [(calculation_block.subtraction(Number(l.value), Number(short.value))), ()];
-      const change_in_net = calculation_block.subtraction(Number(longChange.value), Number(shortChange.value));
+      const [nP1, nP2, nP3] = [
+            (calculation_block.subtraction(Number(l1.value), Number(s1.value))), 
+            (calculation_block.subtraction(Number(l2.value), Number(s2.value))), 
+            (calculation_block.subtraction(Number(l3.value), Number(s3.value)))
+      ];
+      /* cIN is short for change in net */
+      const [cIN1, cIN2, cIN3] = [
+            (calculation_block.subtraction(Number(lC1.value), Number(sC1.value))),
+            (calculation_block.subtraction(Number(lC2.value), Number(sC2.value))),
+            (calculation_block.subrtraction(Number(lC3.value), Number(sC3.value)))
+      ];
       const previous = calculation_block.subtraction(Number(net_position), Number(change_in_net));
 
       if (previous < net_position && net_position > 0) {
