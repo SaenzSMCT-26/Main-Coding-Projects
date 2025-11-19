@@ -1,9 +1,5 @@
 'use strict';
 
-const [l1, l2, l3] = [(document.querySelector('.long_value_one')), (document.querySelector('.long_value_two')), (document.querySelector('.long_value_three'))];
-const [s1, s2, s3] = [(document.querySelector('.short_value_one')), (document.querySelector('.short_value_two')), (document.querySelector('.short_value_three'))];
-const [lC1, lC2, lC3] = [(document.querySelector('.long_value_change_one')), (document.querySelector('.long_value_change_two')), (document.querySelector('.long_value_change_three'))];
-const [sC1, sC2, sC3] = [(document.querySelector('.short_value_change_one')), (document.querySelector('.short_value_change_two')), (document.querySelector('.short_value_change_three'))];
 
 // const array = [0.70, 0.25, -0.05];
 /* -------------- calculation function object -------------- */
@@ -12,10 +8,6 @@ const calculation_block = {
             const sub = long_value - short_value;
             return sub;
       },
-      weighted_score_calc: function(nc, c, nr) {
-            const calc_percentage = (nc) + (c) + (nr);
-            return calc_percentage;
-      }
 }
 
 /* console.log(calc); */
@@ -25,17 +17,7 @@ const resultFn = () => {
       let score;
 
       /* nP is short for net position */
-      const [nP1, nP2, nP3] = [
-            (calculation_block.subtraction(Number(l1.value), Number(s1.value))), 
-            (calculation_block.subtraction(Number(l2.value), Number(s2.value))), 
-            (calculation_block.subtraction(Number(l3.value), Number(s3.value)))
-      ];
-      /* cIN is short for change in net */
-      const [cIN1, cIN2, cIN3] = [
-            (calculation_block.subtraction(Number(lC1.value), Number(sC1.value))),
-            (calculation_block.subtraction(Number(lC2.value), Number(sC2.value))),
-            (calculation_block.subrtraction(Number(lC3.value), Number(sC3.value)))
-      ];
+
       const previous = calculation_block.subtraction(Number(net_position), Number(change_in_net));
 
       if (previous < net_position && net_position > 0) {
