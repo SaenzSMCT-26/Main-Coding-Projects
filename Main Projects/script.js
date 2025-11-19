@@ -11,12 +11,15 @@ const changeInShort = -3000;
 
 function position_comparing(long, short) {
 
+      let compared_result;
+
       if(short < long * 0.25 || short === long * 0.25) {
-            const very_bullish = 'very bullish';
+            const compared_result = 'very bullish';
       }
+
+return compared_result;
 }
 
-if()
 // const array = [0.70, 0.25, -0.05];
 /* -------------- calculation function object -------------- */
 const calculation_block = {
