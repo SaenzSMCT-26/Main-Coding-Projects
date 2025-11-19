@@ -1,5 +1,13 @@
 'use strict';
 
+<<<<<<< HEAD
+=======
+
+const long = document.querySelector('.long_value');
+const short = document.querySelector('.short_value');
+const changeInLong = document.querySelector('.long_value_change);
+const changeInShort = document.querySelector('.short_value_change);
+>>>>>>> d3ffa6977c4850229777d67c8d78833ab11d9687
 
 // const array = [0.70, 0.25, -0.05];
 /* -------------- calculation function object -------------- */
@@ -15,9 +23,17 @@ const calculation_block = {
 const resultFn = () => {
       let result;
       let score;
+      const net_position = calculation_block.subtraction(Number(l1.value), Number(s1.value));
 
+<<<<<<< HEAD
       /* nP is short for net position */
 
+=======
+      
+      const change_in_net = calculation_block.subtraction(Number(lC1.value), Number(sC1.value));
+
+					/*This will be the net position minus the change in net*/
+>>>>>>> d3ffa6977c4850229777d67c8d78833ab11d9687
       const previous = calculation_block.subtraction(Number(net_position), Number(change_in_net));
 
       if (previous < net_position && net_position > 0) {
