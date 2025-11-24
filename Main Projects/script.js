@@ -9,13 +9,17 @@ const short = 45000;
 const changeInLong = 19888;
 const changeInShort = -3000;
 
+/* we can create constant variables to hold the percentage values for compared_result */
+const [lp1, lp2, lp3, lp4] = [(long * 0.25), (long * 0.50), (long * 0.75), (long * 1)];
+const 
+
 function position_comparing(long, short) {
 
       let compared_result;
 
-      if(short < long * 0.25 || short === long * 0.25) {
-            const compared_result = 'very bullish';
-      }
+      if(short <= lp1) {
+            compared_result = 8.75 * 4;//extremely bullish
+      } else if (short <= lp2 && short > lp1)
 
 return compared_result;
 }
