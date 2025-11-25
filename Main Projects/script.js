@@ -4,16 +4,20 @@
 // const short = document.querySelector('.short_value');
 // const changeInLong = document.querySelector('.long_value_change');
 // const changeInShort = document.querySelector('.short_value_change');
-const long = 190000;
-const short = 200000;
+
+// Test input data for long and short positions
+const long = 176400;
+const short = 85900;
+
+// Test input data for how much of a change in positioning there was from the last report
 const changeInLong = 19888;
 const changeInShort = -3000;
 
 /* we can create constant variables to hold the percentage values for compared_result */
-const [lp1, lp2, lp3] = [(long * 0.25), (long * 0.50), (long * 0.75)];
-const [sp1, sp2, sp3] = [(short * 0.25), (short * 0.50), (short * 0.75)];
+const [lp1, lp2, lp3] = [(long * 0.3), (long * 0.58), (long * 0.86)];
+const [sp1, sp2, sp3] = [(short * 0.3), (short * 0.58), (short * 0.86)];
 
-function position_comparing(long, short) {
+function long_short_positioning(long, short) {
 
       let bias;
 
@@ -36,7 +40,7 @@ function position_comparing(long, short) {
       return bias;
 }
 
-console.log(position_comparing(long, short));
+console.log(long_short_positioning(long, short));
 // const array = [0.70, 0.25, -0.05];
 /* -------------- calculation function object -------------- */
 /* const calculation_block = {
