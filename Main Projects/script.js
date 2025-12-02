@@ -17,30 +17,34 @@ const changeInShort = -3000;
 const [lp1, lp2, lp3] = [(long * 0.3), (long * 0.58), (long * 0.86)];
 const [sp1, sp2, sp3] = [(short * 0.3), (short * 0.58), (short * 0.86)];
 
-function long_short_positioning(long, short) {
+function sentiment_Output(long = 'N/A', short = 'N/A', changeInLongs = 'N/A', changeInShorts = 'N/A') {
 
-      let bias;
+      let bias_one;
+      let bias_two;
 
       if (short === long) {
-            bias = "neatral";
+            bias_one = "neatral";
       } else if (short <= lp1) {
-            bias  = "extremely bullish";
+            bias_one  = "extremely bullish";
       } else if (short <= lp2 && short > lp1) {
-            bias  = "very bullish";
+            bias_one  = "very bullish";
       } else if (short <= lp3 && short > lp2) {
-            bias  = "bullish";
+            bias_one  = "bullish";
       } else if (long <= sp1) {
-            bias = "extremely bearish";
+            bias_one = "extremely bearish";
       } else if (long <= sp2 && long > lp1) {
-            bias = "very bearish";
+            bias_one = "very bearish";
       } else if (long <= sp3 && long > lp2) {
-            bias = "bearish";
-      } else bias = "too close for consideration"
+            bias_one = "bearish";
+      } else bias_one = "Low Quality";
 
-      return bias;
+      if (changeInLongs )
+
+      
+      return `Monthly: ${bias_one} \n Weekly: ${bias_two}`;
 }
 
-console.log(long_short_positioning(long, short));
+console.log(sentiment_Output(long, short));
 // const array = [0.70, 0.25, -0.05];
 /* -------------- calculation function object -------------- */
 /* const calculation_block = {
