@@ -38,10 +38,9 @@ function sentiment_Output(long = 'N/A', short = 'N/A', changeInLongs = 'N/A', ch
             bias_one = "bearish";
       } else bias_one = "Low Quality";
 
-      if (changeInLongs )
 
       
-      return `Monthly: ${bias_one} \n Weekly: ${bias_two}`;
+      return yen;
 }
 
 console.log(sentiment_Output(long, short));
