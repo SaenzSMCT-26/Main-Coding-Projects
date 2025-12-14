@@ -57,6 +57,8 @@ function comparator(current, wk2, wk3, wk4) {
 const longPositions = comparator(currentWeekLongChange, weekTwoLongChange, weekThreeLongChange, weekFourLongChange);
 const shortPositions = comparator(currentWeekShortChange, weekTwoShortChange, weekThreeShortChange, weekFourShortChange);
 
+
+
 const longs = [...longPositions];
 const shorts = [...shortPositions];
 
@@ -68,7 +70,18 @@ console.log(`longs: [${longs}]`);
 console.log(`shorts: [${shorts}]`);
 console.log(`\n`);
 
-
+function combinedNetChange() {
+      let netChangesArray = [];
+      const len = 4;
+      for(let j = 0; j < len; j++) {
+            for(let i = j; i < len - j - 1; i++) {
+                  let longsPlusShorts = longs[i] + shorts[i];
+                  netChangesArray.push(longsPlusShorts);
+            }
+      }
+      return netChangesArray;
+}
+console.log(`This is the combined net changes: ${combinedNetChange()}`);
 
 
 
