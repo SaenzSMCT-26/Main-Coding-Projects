@@ -62,6 +62,14 @@ const shorts = [...shortPositions];
 
 
 
+// come back to this. It will be used for 
+console.log(`\n`);
+console.log(`longs: [${longs}]`);
+console.log(`shorts: [${shorts}]`);
+console.log(`\n`);
+
+
+
 
 
 function deltaSentiment(delta) {
