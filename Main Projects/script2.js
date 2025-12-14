@@ -5,7 +5,11 @@
 
 const weekly_COT_Non_Commercials = {
       longs: [169890,172349,170180,178745],
-      shorts: [138733,123873,118915,110630],
+      shorts: [-138733,-123873,-118915,-110630],
+      /* 
+      Remember to turn the short values into negatives for the
+      data to be taken in properly. :)
+      */
 }
 
 
@@ -15,8 +19,8 @@ let arrLongs = [];
 let arrShorts = [];
 (function retrieveLongs() {
       let count = 0;
-      const long_reports = weekly_COT_NonCommercials.longs;
-      const short_reports = weekly_COT_NonCommercials.shorts; 
+      const long_reports = weekly_COT_Non_Commercials.longs;
+      const short_reports = weekly_COT_Non_Commercials.shorts; 
       const len = 4;
 
       for(let j = 0; j < len; j++) {
@@ -69,13 +73,12 @@ function deltaSentiment(delta) {
       
       return result ?? b2;
 }
-console.log(deltaSentiment(longs[0]));
-console.log(deltaSentiment(longs[1]));
-console.log(deltaSentiment(longs[2]));
+const longSentiment = [deltaSentiment(longs[0]), deltaSentiment(longs[1]), deltaSentiment(longs[2])];
+const shortSentiment = [deltaSentiment(shorts[0]), deltaSentiment(shorts[1]), deltaSentiment(shorts[2])];
 
 
-console.log(longs);
-console.log(shorts);
+console.log(longSentiment);
+console.log(shortSentiment);
 
 // function comparator() {
 //       const len = 
