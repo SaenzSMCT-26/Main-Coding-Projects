@@ -1,7 +1,7 @@
 * {
       margin: 0;
       padding: 0;
-      border: solid black 1px;
+      /* border: solid black 1px; */
 }
 
 html {
@@ -15,6 +15,8 @@ body {
       width: 100%;
       height: 100%;
 
+      background-color: black;
+
       #container {
             width: 50%;
             height: 80%;
@@ -23,26 +25,45 @@ body {
             align-items: center;
             flex-direction: column;
             gap: 20px;
+            border-radius: 30px;
+
+            background-color: slategray;
+
+
 
             #displayScreen {
                   width: 80%;
                   height: 40px;
             }
-            #inputContainer {
+            #inputAndLeverageDisplay {
                   width: 80%;
                   height: 60%;
                   display: flex;
                   justify-content: space-evenly;
                   align-items: center;
-                  flex-direction: column;
                   
-                  .inpt {
-                        width: 300px;
-                        height: 40px;
-                  }
-                  .calculateBtn {
+                  .innerContainers {
+                        height: 200px;
                         width: 40%;
-                        height: 50px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+
+                        background-color: darkblue;
+                        padding: 20px;
+                        .inpt {
+                              width: 100%;
+                              height: 40px;
+                        }
+                        .calculateBtn {
+                              width: 40%;
+                              height: 50px;
+                        }
+
+                        .leverage_display {
+                              font-size: 20pt;
+                        }
                   }
             }
       }

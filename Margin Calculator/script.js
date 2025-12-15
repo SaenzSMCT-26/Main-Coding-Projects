@@ -8,11 +8,14 @@ const lotSizeInput = document.querySelector('#lot_size');
 /* This is the percentage of margin that is required at the most for a specified currency pair */
 const marginPercentageInput = document.querySelector('#margin_percent');
 
+const leverageDisplay = document.querySelector('.leverage_display');
+
 const calcButton = document.querySelector('.calculateBtn');
 
 
 
 calcButton.addEventListener('click', () => {
+      leverageDisplay.textContent = '';
       display.textContent = '';
       const lot = lotSizeInput.value;
       const margin = marginPercentageInput.value;
@@ -22,5 +25,6 @@ calcButton.addEventListener('click', () => {
       
       const marginRequired = firstCalc / secondCalc;
       
+      leverageDisplay.textContent = `${Math.trunc(secondCalc)}:1`;
       display.textContent = `$${marginRequired}`;
 });
