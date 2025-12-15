@@ -1,4 +1,4 @@
-"strict mode";
+// "strict mode";
 
 /* these are the input values we will use later when we start to build out the web app */
 
@@ -18,21 +18,13 @@ const weekly_COT_Non_Commercials = {
 let arrLongs = [];
 let arrShorts = [];
 (function retrieveLongs() {
-      let count = 0;
       const long_reports = weekly_COT_Non_Commercials.longs;
       const short_reports = weekly_COT_Non_Commercials.shorts; 
       const len = 4;
-
-      for(let j = 0; j < len; j++) {
-            for(let i = j; i < len - j - 1; i++) {
-                  (function pushData() {
-                        arrLongs.push(long_reports[count]);
-                        arrShorts.push(short_reports[count]);
-                  })();
-                  count+=1;
-            }
+      for(let i = 0; i < len; i++) {
+            arrLongs.push(long_reports[i]);
+            arrShorts.push(short_reports[i]);
       }
-      return arrLongs;
 })();
 
 //test ouput for arrays(arrays of COT long and short positions data)
@@ -72,16 +64,15 @@ console.log(`\n`);
 
 function combinedNetChange() {
       let netChangesArray = [];
-      const len = 4;
-      for(let j = 0; j < len; j++) {
-            for(let i = j; i < len - j - 1; i++) {
-                  let longsPlusShorts = longs[i] + shorts[i];
-                  netChangesArray.push(longsPlusShorts);
-            }
+      const len = longs.length;
+      for(let i = 0; i < len; i++) {
+            let longsPlusShorts = longs[i] + shorts[i];
+            netChangesArray.push(longsPlusShorts);
       }
       return netChangesArray;
 }
 console.log(`This is the combined net changes: ${combinedNetChange()}`);
+console.log(`\n`);
 
 
 

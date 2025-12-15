@@ -9,5 +9,13 @@ const lotSize = document.querySelector('#lot_size');
 const marginPercentage = document.querySelector('#margin_percent');
 
 
+function marginCalc() {
+      const firstCalc = lotSize.inputValue * 100000;
+      const secondCalc = 100 / marginPercentage.inputValue;
 
-const marginCalc()
+      return `$${firstCalc / secondCalc}`;
+}
+
+document.querySelector('.calculateBtn').addEventListener('click', () => {
+      display.textContent = marginCalc();
+});
