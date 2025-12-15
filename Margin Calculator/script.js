@@ -1,21 +1,25 @@
-"strict mode";
+"use strict";
 /* displays the final result which will be the total dollar amount that will be required at all times for a specific currency pair */
-const display = document.querySelector('#display');
+const display = document.querySelector('#displayScreen');
 
 /* this is where you are going to enter your current lot size you want to use for a trade position */
-const lotSize = document.querySelector('#lot_size');
+const lotSizeInput = document.querySelector('#lot_size');
 
 /* This is the percentage of margin that is required at the most for a specified currency pair */
-const marginPercentage = document.querySelector('#margin_percent');
+const marginPercentageInput = document.querySelector('#margin_percent');
+
+const calcButton = document.querySelector('.calculateBtn');
 
 
-function marginCalc() {
-      const firstCalc = lotSize.inputValue * 100000;
-      const secondCalc = 100 / marginPercentage.inputValue;
-
-      return `$${firstCalc / secondCalc}`;
-}
-
-document.querySelector('.calculateBtn').addEventListener('click', () => {
-      display.textContent = marginCalc();
+calcButton.addEventListener('click', () => {
+      display.textContent = '';
+      const lot = lotSizeInput.value;
+      const margin = marginPercentageInput.value;
+      
+      const firstCalc = lot * 100000;
+      const secondCalc = 100 / margin;
+      
+      const marginRequired = firstCalc / secondCalc;
+      
+      display.textContent = `$${marginRequired}`;
 });
