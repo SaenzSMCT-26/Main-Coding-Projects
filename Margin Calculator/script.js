@@ -11,6 +11,7 @@ const marginPercentageInput = document.querySelector('#margin_percent');
 const calcButton = document.querySelector('.calculateBtn');
 
 
+
 calcButton.addEventListener('click', () => {
       display.textContent = '';
       const lot = lotSizeInput.value;
