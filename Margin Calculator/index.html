@@ -5,18 +5,27 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Margin Calculator</title>
       <link rel="stylesheet" href="style.css">
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
+      <h1 id="AppTitle">Margin Calculator V.1</h1>
       <div id="container">
             <h1 id="displayScreen"></h1>
             
             <div id="inputAndLeverageDisplay">
-                  <div class="innerContainers">
+                  <div class="innerContainers" id="input_fields">
                         <input id="lot_size" class="inpt" type="number" placeholder="Lot Size">
                         <input id="margin_percent" class="inpt" type="number" placeholder="Margin%">
-                        <button class="calculateBtn">Calculate</button>
+                        <div id="resetAndCalcContainer">
+                              <button class="calResBtns" id="calculateBtn">Calculate</button>
+                              <button class="calResBtns" id="resetBtn">Reset</button>
+                        </div>
                   </div>
-                  <div class="innerContainers">
+                  <div class="innerContainers" id="leverage_ratio">
+                        <h2 class="levRatio">Leverage Ratio</h2>
                         <p class="leverage_display"></p>
                   </div>
             </div>

@@ -10,21 +10,22 @@ const marginPercentageInput = document.querySelector('#margin_percent');
 
 const leverageDisplay = document.querySelector('.leverage_display');
 
-const calcButton = document.querySelector('.calculateBtn');
+const calcButton = document.querySelector('#calculateBtn');
 
 
 
 calcButton.addEventListener('click', () => {
       leverageDisplay.textContent = '';
       display.textContent = '';
-      const lot = lotSizeInput.value;
-      const margin = marginPercentageInput.value;
+      const lot = Number(lotSizeInput.value);
+      const margin = Number(marginPercentageInput.value);
       
       const firstCalc = lot * 100000;
       const secondCalc = 100 / margin;
       
       const marginRequired = firstCalc / secondCalc;
-      
-      leverageDisplay.textContent = `${Math.trunc(secondCalc)}:1`;
+
+      leverageDisplay.textContent = `Leverage Ratio | ${Math.trunc(secondCalc)}:1`;
       display.textContent = `$${marginRequired}`;
+      
 });
